@@ -15,18 +15,47 @@ and open the template in the editor.
         <header>Űrlap</header>
 
         <main>
-                        <nav>
+            <nav>
                 <ul>
                     <li><a href="index.html">Egyik</a></li>
                     <li><a href="masik.html">Másik</a></li>
-                    
-
                 </ul>                       
             </nav>
             <article>
 
-                <form>
-                    
+                <form action="feldolgoz.php" target="_blank" method="get">
+                    <fieldset>
+                        <legend>Bejelentkezés személyes adatok</legend>
+                        <label for="nev"><!-- szöveg, amit a felhasznalónak szánunk -->
+                            Kérjük add meg a nevedet:*
+                        </label>
+                        <input type="text" name="nev" id="nev" required placeholder="Vezetéknév Keresztnév" ><!-- comment --> 
+                        <label for="nev">Kérjük add meg a jelszavadat</label>
+                        <input type="password" name="jelszo" id="jelszo" disabled><!-- comment --> 
+                    </fieldset>
+                    <label for="nev"><!-- szöveg, amit a felhasznalónak szánunk -->
+                        Kérjük add meg a nemedet
+                    </label>
+                    <fieldset>
+                        <legend>Bejelentkezés személyes adatok</legend>
+                        <label for="other">Férfi</label>
+                        <input type="radio" id="male" name="gender" value="male" checked>
+                        <label for="other">Nő</label>
+                        <input type="radio" id="no" name="gender" value="no">
+                        <label for="other">Egyéb</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Melyik VOLVO típust szereted</legend>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1" >
+                        <label for="vehicle1"> Városi Terepjáró XC</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="vehicle2">
+                        <label for="vehicle2">Könnyen Pakolható kis autó: C30</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="vehicle3">
+                        <label for="vehicle3">Sport kocsi: C70</label>
+                    </fieldset>
+                    <input type="submit" value="küld">      
+
                 </form>
 
             </article>
